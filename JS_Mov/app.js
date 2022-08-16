@@ -1,7 +1,7 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 //const loginButton = document.querySelector("#login-form button");
-
+const link = document.querySelector("a");
 // function onLoginSubmit(){
 //     const username = loginInput.value;
 //     // if(username === ""){
@@ -29,6 +29,14 @@ function onLoginSubmit(event){
     // -> func(arg) 를 func() 이런식으로 argument 없이 호출해도, 에러가 발생하지 않을 수 있습니다. 
     //arg과 관련 없이 function func(arg) { console.log("no error"!);} 이런 식으로 말이죠
 }
+
+//함수는 1번만 실행된다.
+function handleLinkClick(event){
+    // event.preventDefault(); --> default 행동을 못하게 막는 것
+    console.log(event);
+    // alert("clicked!");
+}
 //submit가 되면 onLoginSubmit를 당장 실행시킨다.
 loginForm.addEventListener("submit",onLoginSubmit);
 //loginButton.addEventListener("click",handBtnClick);
+link.addEventListener("click",handleLinkClick);
