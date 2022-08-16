@@ -2,6 +2,8 @@ const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 //const loginButton = document.querySelector("#login-form button");
 const link = document.querySelector("a");
+const greeting = document.querySelector("#greeting");
+const HIDDEN_CLASSNAME = "hidden";
 // function onLoginSubmit(){
 //     const username = loginInput.value;
 //     // if(username === ""){
@@ -23,8 +25,11 @@ function onLoginSubmit(event){
     //함수가 JS에서 주는 정보의 preventDefault()를 부르고 싶은데 부를 수가 없다.
     event.preventDefault(); 
     //preventDefault가 기본동작을 못하게 한다.(submit되면 새로고침하게 되는 기본동작)
-    //const username = loginInput.value;
-    console.log(loginInput.value);
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    const username = loginInput.value;   
+    //greeting.innerHTML = "Hello " + username;
+    greeting.innerHTML = `Hello ${username}`; // --> "",''이 아니라 ` --> option + ~
+    greeting.classList.remove(HIDDEN_CLASSNAME);
     //함수에서 입력값을 만들면 함수 사용 시 입력값과 함께 들어가야 에러가 발생
     // -> func(arg) 를 func() 이런식으로 argument 없이 호출해도, 에러가 발생하지 않을 수 있습니다. 
     //arg과 관련 없이 function func(arg) { console.log("no error"!);} 이런 식으로 말이죠
