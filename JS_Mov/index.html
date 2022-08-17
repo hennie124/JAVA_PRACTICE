@@ -9,7 +9,7 @@
 </head>
 <body>
     <h2 id="date" class = "date">0000-00-00</h2>
-    <h2 id="clock" class = "date">00 00:00:00</h2>
+    <h2 id="clock" class = "date">00 00:00</h2>
     <form id="login-form" class="hidden">
         <input 
         required maxlength="15" 
@@ -19,13 +19,24 @@
          <a href="https://www.thermofisher.com/diagnostic-education/patient/kr/ko/allergy.html?redirect=false">
             go to thermofisher</a> 
     </form>
+    <form id="to-do form">
+        <input type="text" placeholder="Write a TO-DO and Press" required/>
+    </form>
+    <ul id="to-do list"></ul>
     <form id="logout-form" class="hidden">
         <h1 id="greeting" class="hidden">
         </h1>
         <input type="submit" value="Logout"/>
     </form>
+    <div id="quote">
+        <span></span>
+        <span></span>
+    </div>
     <script src="greeting.js"></script>
     <script src="clock.js"></script>
+    <script src="quotes.js"></script>
+    <script src="background.js"></script>
+    <script src="todo.js"></script>
     
 </body>
 </html>

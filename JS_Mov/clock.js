@@ -23,11 +23,13 @@ function getClock(){
     if(hours < 12){
         J = "AM";
         h = String(h).padStart(2,"0"); 
-        clock.innerHTML = `${J} ${h} : ${minutes} : ${seconds}`;
+       // clock.innerHTML = `${J} ${h} : ${minutes} : ${seconds}`;
+        clock.innerHTML = `${J} ${h} : ${minutes}`;
     }else{
         J = "PM";
         h = String(h - 12).padStart(2,"0"); 
-        clock.innerHTML = `${J} ${h} : ${minutes} : ${seconds}`;
+       // clock.innerHTML = `${J} ${h} : ${minutes} : ${seconds}`;
+        clock.innerHTML = `${J} ${h} : ${minutes}`;
     }
 }
 
