@@ -8,17 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form id="login-form">
+    <h2 id="date" class = "date">0000-00-00</h2>
+    <h2 id="clock" class = "date">00 00:00:00</h2>
+    <form id="login-form" class="hidden">
         <input 
         required maxlength="15" 
         type="text" 
         placeholder="what kind your allergy?"/>
-        <input type="submit" value="Login"/>
-        <a href="https://www.thermofisher.com/diagnostic-education/patient/kr/ko/allergy.html?redirect=false">
-            go to thermofisher</a>
+        <input type="submit" style="color: blue; shape-rendering:auto;" value="Login"/>
+         <a href="https://www.thermofisher.com/diagnostic-education/patient/kr/ko/allergy.html?redirect=false">
+            go to thermofisher</a> 
     </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <script src="app.js"></script>
+    <form id="logout-form" class="hidden">
+        <h1 id="greeting" class="hidden">
+        </h1>
+        <input type="submit" value="Logout"/>
+    </form>
+    <script src="greeting.js"></script>
+    <script src="clock.js"></script>
     
 </body>
 </html>
